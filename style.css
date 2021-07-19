@@ -1,0 +1,186 @@
+/* Chandler Thompson */
+
+html{
+  background: url("lake.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100%;
+}
+
+h1{
+  text-align: center;
+  font-style: italic;
+  font-family: cursive;
+  background-color: rgb(0,128,0,.8);
+  padding: 20px;
+  margin-bottom: 0px;
+  border: 2px solid black;
+}
+.topnav{
+  background-color: rgb(124,252,0,.8);
+  font-size: 25px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 0px 0px 25px 25px;
+}
+a:link, a:visited{
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+
+}
+ul{
+  list-style-type: none;
+}
+
+body{
+  background-color: rgb(255,248,220,.8);
+  margin: 30px;
+}
+
+
+
+.rods{
+  background: url("wood.jpg");
+  background-position: center;
+  background-size: cover;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.livebait{
+  background: url("wood.jpg");
+  background-position: center;
+  background-size: cover;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.livefish{
+  background: url("wood.jpg");
+  background-position: center;
+  background-size: cover;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.coldbait{
+  background: url("wood.jpg");
+  background-position: center;
+  background-size: cover;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.livebait h2{
+  margin-top: 0px;
+}
+
+.header2 { grid-area: header2; }
+.rods {grid-area: rods;}
+.livebait { grid-area: livebait; }
+.livefish { grid-area: livefish; }
+.coldbait { grid-area: coldbait; }
+.supplie{
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto;
+  grid-template-areas:
+  'header2 header2 header2 header2'
+  'rods rods livebait livebait'
+  'coldbait coldbait livefish livefish';
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+.Info { grid-area: info; }
+.services {grid-area: services;}
+.map { grid-area: map; }
+.video { grid-area: video; }
+.main{
+  display: grid;
+  grid-template-areas:
+  'info services'
+  'map video';
+  grid-gap: 20px;
+  padding: 10px;
+}
+.main{
+  text-align: center;
+  background: url("wood2.jpg");
+  background-position: center;
+  background-size: cover;
+  font-weight: bold;
+  margin: 20px;
+  border-radius: 10px;
+}
+.Info{
+  background-color: rgb(255,248,220,.8);
+  border-radius: 20px;
+}
+.services{
+  background-color: rgb(255,248,220,.8);
+  border-radius: 20px;
+}
+
+footer{
+  background-color: rgb(0,128,0,.8);
+  text-align: right;
+  padding: 5px;
+  border-radius: 20px 20px 0px 0px;
+}
+@media screen and (max-width:1240px){
+  .main{
+    grid-template-areas:
+    'info'
+    'map'
+    'services'
+    'video';
+    grid-gap: 20px;
+    padding: 10px;
+  }
+}
+@media screen and (max-width:900px){
+  .supplie{
+    grid-template-areas:
+    'header2'
+    'rods'
+    'livebait'
+    'coldbait'
+    'livefish';
+    grid-gap: 20px;
+    padding: 10px;
+  }
+  .header2 img{
+    width: 500px;
+  }
+
+}
+@media screen and (max-width:710px){
+  .main .map iframe{
+    width: 300px;
+    height: 150px;
+  }
+  .main .video iframe{
+    width: 360px;
+    height: 150px;
+  }
+}
+@media screen and (max-width:610px){
+  .header2 img{
+    width: 350px;
+  }
+  .main .map iframe{
+    width: 200px;
+    height: 150px;
+  }
+  .main .video iframe{
+    width: 200px;
+    height: 150px;
+  }
+}
+@media screen and (max-width:568px){
+  .navflex{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+
+}
